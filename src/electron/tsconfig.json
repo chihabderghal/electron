@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "module": "NodeNext",
+    "outDir": "../../dist-electron",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "node",
+      "electron"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "noImplicitAny": true,
+    "allowJs": false,
+    "noEmitOnError": true,
+    "sourceMap": true
+  },
+  "include": ["./**/*.ts", "./**/*.cts"],
+  "exclude": [
+    "node_modules",
+    "entities"
+  ]
+}

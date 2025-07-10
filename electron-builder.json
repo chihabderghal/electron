@@ -1,0 +1,27 @@
+{
+    "appId": "GestAuto",
+    "productName": "GestAuto",
+    "extraResources": ["./dist-electron/preload.cjs"],
+    "files": [
+        "dist-electron/**/*",
+        "dist-react/**/*",
+        "!**/*.map",
+        "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+        "!**/node_modules/.bin",
+        "package.json"
+    ],
+    "directories": {
+        "buildResources": "src/renderer/assets",
+        "output": "out"
+    },
+    "win": {
+        "target": ["nsis"]
+    },
+    "linux": {
+        "target": ["AppImage"]
+    },
+    "mac": {
+        "target": ["dmg"]
+    }
+}
+
