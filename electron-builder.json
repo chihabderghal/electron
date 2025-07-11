@@ -1,7 +1,7 @@
 {
     "appId": "GestAuto",
     "productName": "GestAuto",
-    "extraResources": ["./dist-electron/preload.cjs"],
+    "extraResources": ["./dist-electron/preload/preload.cjs"],
     "files": [
         "dist-electron/**/*",
         "dist-react/**/*",
@@ -10,8 +10,9 @@
         "!**/node_modules/.bin",
         "package.json"
     ],
+    "icon": "build/icon.ico",
     "directories": {
-        "buildResources": "src/renderer/assets",
+        "buildResources": "./build",
         "output": "out"
     },
     "win": {

@@ -7,15 +7,6 @@ import { Button } from './components/ui/button';
 import { Card } from './components/ui/card';
 import { Separator } from './components/ui/separator';
 
-declare global {
-  interface Window {
-    electronAPI: {
-      saveUser: (user: { name: string; email: string }) => Promise<{ success: boolean; error?: string }>;
-      getUsers: () => Promise<Array<{ id: number; name: string; email: string }>>;
-    };
-  }
-}
-
 function App() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
