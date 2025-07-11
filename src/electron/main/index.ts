@@ -1,22 +1,21 @@
 import 'reflect-metadata';
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import { AppDataSource } from '../db/data-source.js';
-import { User } from '../db/entities/User.js';
 import { registerIpcHandlers } from '../ipc/registerIpcHandlers.js';
 
 let mainWindow: BrowserWindow | null = null;
 
-function isDev(): boolean {
+export function isDev(): boolean {
   return process.env.NODE_ENV === 'development';
 }
 
 async function initDatabase() {
   try {
     await AppDataSource.initialize();
-    console.log('✅ Data Source initialized successfully.');
+    console.log('Data Source initialized successfully.');
   } catch (err) {
-    console.error('❌ Failed to initialize Data Source:', err);
+    console.error('Failed to initialize Data Source:', err);
     app.quit();
   }
 }
