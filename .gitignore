@@ -26,4 +26,4 @@ dist-ssr
 *.sw?
 
 # database
-./gestauto-dev.sqlite3
+gestauto-dev.sqlite3
