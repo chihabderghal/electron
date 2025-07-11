@@ -18,8 +18,8 @@
     // Shadcn UI
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
+      "@renderer/*": [
+        "./src/renderer/*"
       ]
     },
 
